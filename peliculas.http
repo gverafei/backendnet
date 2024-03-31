@@ -2,6 +2,10 @@ GET https://localhost:7198/api/peliculas
 
 ###
 
+GET https://localhost:7198/api/peliculas?s=Dun
+
+###
+
 GET https://localhost:7198/api/peliculas/2
 
 ###
