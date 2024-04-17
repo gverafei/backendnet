@@ -1,16 +1,16 @@
-GET https://localhost:7198/api/peliculas
+GET http://localhost:3000/api/peliculas
 
 ###
 
-GET https://localhost:7198/api/peliculas?s=Dun
+GET http://localhost:3000/api/peliculas/api/peliculas?s=Dun
 
 ###
 
-GET https://localhost:7198/api/peliculas/2
+GET http://localhost:3000/api/peliculas/api/peliculas/2
 
 ###
 
-POST https://localhost:7198/api/peliculas
+POST http://localhost:3000/api/peliculas/api/peliculas
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
 
 ###
 
-PUT https://localhost:7198/api/peliculas/16
+PUT http://localhost:3000/api/peliculas/api/peliculas/16
 Content-Type: application/json
 
 {
@@ -37,4 +37,4 @@ Content-Type: application/json
 
 ###
 
-DELETE https://localhost:7198/api/peliculas/16
+DELETE http://localhost:3000/api/peliculas/api/peliculas/16
