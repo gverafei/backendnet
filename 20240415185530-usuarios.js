@@ -6,8 +6,8 @@ const crypto = require('crypto')
 module.exports = {
     async up(queryInterface, Sequelize) {
 
-        const AdministradorUUID = crypto.randomUUID();
-        const UsuarioUUID = crypto.randomUUID();
+        const AdministradorUUID = crypto.randomUUID()
+        const UsuarioUUID = crypto.randomUUID()
 
         await queryInterface.bulkInsert('rol', [
             { id: AdministradorUUID, nombre: 'Administrador', createdAt: new Date(), updatedAt: new Date() },
@@ -15,13 +15,13 @@ module.exports = {
         ]);
 
         await queryInterface.bulkInsert('usuario', [
-            { id: crypto.randomUUID(), email: 'gvera@uv.mx', passwordhash: await bcrypt.hash('patito', 10), nombre: 'Guillermo Vera', rolid: AdministradorUUID, createdAt: new Date(), updatedAt: new Date() },
+            { id: crypto.randomUUID(), email: 'gvera@uv.mx', passwordhash: await bcrypt.hash('patito', 10), nombre: 'Guillermo Vera', rolid: AdministradorUUID, protegido: true, createdAt: new Date(), updatedAt: new Date() },
             { id: crypto.randomUUID(), email: 'patito@uv.mx', passwordhash: await bcrypt.hash('patito', 10), nombre: 'Usuario patito', rolid: UsuarioUUID, createdAt: new Date(), updatedAt: new Date() }
         ]);
     },
 
     async down(queryInterface, Sequelize) {
-        await queryInterface.bulkDelete('rol', null, {});
-        await queryInterface.bulkDelete('usuario', null, {});
+        await queryInterface.bulkDelete('rol', null, {})
+        await queryInterface.bulkDelete('usuario', null, {})
     }
 };
