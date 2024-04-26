@@ -6,7 +6,7 @@ GET http://localhost:3000/api/peliculas?s=Dun
 
 ###
 
-GET http://localhost:3000/api/peliculas/2
+GET http://localhost:3000/api/peliculas/19
 
 ###
 
@@ -16,25 +16,40 @@ Content-Type: application/json
 {
     "titulo": "Película de prueba",
     "sinopsis": "Sinopsis de prueba.",
-    "anio": 2024,
-    "poster": "Sin poster",
-    "categorias": [2, 3]
+    "anio": 2024
 }
 
 ###
 
-PUT http://localhost:3000/api/peliculas/16
+PUT http://localhost:3000/api/peliculas/19
 Content-Type: application/json
 
 {
-    "peliculaid": 16,
+    "peliculaid": 19,
     "titulo": "Paw Patrol: La Súper Película",
     "sinopsis": "Un meteorito mágico aterriza en Adventure City y otorga superpoderes a los cachorros de PAW Patrol, convirtiéndolos en The Mighty Pups.",
     "anio": 2024,
-    "poster": "https://m.media-amazon.com/images/M/MV5BMGI4NTNlODItMGJlZi00OTIwLTlkM2ItMWFkZjJhZDIzMDc3XkEyXkFqcGdeQXVyMTEyNzQ1MTk0._V1_SX300.jpg",
-    "categorias": [1, 2, 3]
+    "poster": "https://m.media-amazon.com/images/M/MV5BMGI4NTNlODItMGJlZi00OTIwLTlkM2ItMWFkZjJhZDIzMDc3XkEyXkFqcGdeQXVyMTEyNzQ1MTk0._V1_SX300.jpg"
 }
 
 ###
 
-DELETE http://localhost:3000/api/peliculas/16
+POST http://localhost:3000/api/peliculas/19/categoria
+Content-Type: application/json
+
+{
+    "categoriaid": "2"
+}
+
+###
+
+DELETE http://localhost:3000/api/peliculas/19/categoria
+Content-Type: application/json
+
+{
+    "categoriaid": "1"
+}
+
+###
+
+DELETE http://localhost:3000/api/peliculas/19
